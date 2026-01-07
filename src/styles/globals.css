@@ -1,0 +1,59 @@
+/* src/styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ocultar scrollbar pero mantener funcionalidad */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Mejoras para line-clamp */
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* Animaciones suaves */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Estilos personalizados para Swiper */
+.swiper-pagination-bullet {
+  background: white;
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+  background: #f97316;
+  opacity: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #f97316;
+}
+
+/* Ocultar botones de navegación por defecto de Swiper y usar nuestros botones personalizados */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
